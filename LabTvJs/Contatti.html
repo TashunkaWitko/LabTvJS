@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stili/Contatti.css">
+    <title>Contatti</title>
+
+
+</head>
+<body>
+
+    <header><h1>Contatti</h1></header>
+
+    <div class="container">
+        <form action="#" method="post" id="formc">
+            <label for="nome">Nome</label><input type="text" id="nome" name="nome" required><br><br>
+            <label for="cognome">Cognome</label><input type="text" id="cognome" name="cognome" required><br><br>
+            <label for="email">Email</label><input type="text" id="email" name="email" required><br><br>
+            <label for="tel">Telefono</label><input type="tel" id="tel" name="tel" required><br><br>
+            <input type="checkbox" required>Accetto i termini e condizioni d'utilizzo <br><br>
+            Se hai dubbi o domande scrivici attraverso il box sottostante!<br>
+            <textarea name="domanda" id="domanda" cols="10" rows="5"></textarea><br>
+            <button type="submit" id="submit">Invia</button>
+            <div id="errore">Dati inseriti errati.</div>
+        </form>
+    </div>
+   
+    
+</body>
+<script src="script/Contatti.js"></script>
+</html>

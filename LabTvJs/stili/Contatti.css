@@ -1,0 +1,70 @@
+*{
+    box-sizing: border-box;
+}
+
+
+header{
+    margin: 20px auto 0 auto;
+    color: white;
+    font-size: 2em;
+}
+
+body{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url(../images/wallpaper.jpg);
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+
+}
+
+.container{
+    max-width: 800px;
+    min-width: 400px;
+    border: 2px solid white;
+    border-top: none;
+    background-color: white;
+    margin: 0 auto;
+    padding: 0;
+    width: 30%;
+
+    border-radius: 10px;
+    text-align: center;
+}
+
+form{
+    padding: 10px;
+}
+
+form > *{
+    padding: 10px;
+    margin: 10px; 
+}
+
+label{
+    display: inline-block;
+    width: 140px;
+    text-align: left;
+}
+
+#domanda{
+    min-width: 100px;
+    min-height: 50px;
+    max-width: 350px;
+    max-height: 200px;
+
+}
+
+#submit{
+    width: 150px;
+}
+
+#submit:hover{
+    cursor: pointer;
+}
+
+#errore{
+    display: none;
+    color: red;
+}

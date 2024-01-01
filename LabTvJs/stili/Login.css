@@ -1,0 +1,77 @@
+*{
+    box-sizing: border-box;
+}
+
+
+header{
+    margin: 20px auto 0 auto;
+    color: white;
+    font-size: 2em;
+}
+
+body{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url(../images/wallpaper.jpg);
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+
+}
+
+div{
+    min-width: 400px;
+    border: 2px solid white;
+    border-top: none;
+    background-color: white;
+    margin: 0 auto;
+    padding-bottom: 10px;
+    width: 30%;
+    border-radius: 10px;
+    text-align: center;
+}
+
+form{
+    padding: 10px;
+    padding-top: 30px;
+}
+
+form > *{
+    padding: 10px;
+    margin: 10px; 
+}
+
+label{
+    display: inline-block;
+    width: 140px;
+    text-align: left;
+}
+
+#submit{
+    width: 100px;
+}
+
+#submit:hover{
+    cursor: pointer;
+    
+}
+.risultato{
+    display: none;
+    margin-top: 20px;
+    height: fit-content;
+    padding: 10px;
+    background-color: green;
+    color: white;
+    border: none;
+}
+
+#errore{
+    margin: 0 auto;
+    display: none;
+    margin-top: 20px;
+    color: white;
+    background-color: red;
+    padding: 10px;
+    width: 30%;
+    border-radius: 10px;
+}

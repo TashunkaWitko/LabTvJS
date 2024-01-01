@@ -1,0 +1,836 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    overflow: auto;
+    overflow-x: hidden;
+    margin: 0 auto;
+    padding: 0 10px;
+    background-image: url(../images/sky.jpg);
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header{
+    margin: 10px auto 10px auto;
+    padding: 10px;
+    height: 140px;
+    width: 100%;
+    text-align: center;
+    background-image: url(../images/logo-tipo.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.menu{
+    margin: 10px auto 15px auto;
+    padding: 0;
+    display: flex;
+    list-style: none;
+    text-align: center;
+    z-index: 1;
+    height: 70px;
+}
+
+.menu li{
+    width: 20%;
+    font-size: 1.6em;
+    border: 2px solid white; 
+}
+
+.menu li:nth-child(2) img{
+    object-position: -256px;
+}
+
+.menu li:nth-child(3) img{
+    object-position: 0;
+}
+
+.menu li:nth-child(4) img{
+    object-position: -192px;
+}
+
+.menu li:nth-child(5) img{
+    object-position: -128px;
+}
+
+.menu a{
+    display: block;
+    line-height: 70px;
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+    background-color: none;
+    position: relative;
+}
+
+.menu li a img{
+    object-fit: cover;
+    height:32px;
+    width: 32px;   
+    position: absolute;
+    left: 20px;
+    top: 15px;
+    transition: 0.3s;
+}
+
+.menu a:hover{
+    color: black;
+}
+
+
+/*Dichiarazioni dello slider e dei pulsanti*/
+
+.news{
+    padding: 0;
+    margin: 0;
+    position: relative;
+}
+
+.slider{
+    margin-top: 10px;
+    margin-bottom: 40px; ;
+    height: 350px;
+    border: 2px solid white;
+    position: relative;
+    overflow: hidden;
+}
+
+.slider .immagine{
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: absolute;
+    left:100%;
+}
+
+.slider .left{
+    left:-100%;
+    transition: 1s;
+}
+
+.slider .show{
+    left:0;
+    transition: 1s;
+}
+
+.slider .right{
+    left: 100%;
+    transition: 1s;
+}
+
+.slider .BB{
+    background-image: url(../images/BB-horizontal.png);
+}
+
+.slider .BJ{
+    background-image: url(../images/BJ-banner.webp);
+}
+
+.slider .Prestige{
+    background-image: url(../images/ted_lasso_banner.jpg);
+}
+
+.slider .RO{
+    background-image: url(../images/Rogue-one-banner.jpg);
+}
+
+.slider .Focus{
+    background-image: url(../images/focus.png);
+}
+
+.slider li{
+    list-style: none;
+    width: 100%;
+}
+
+.news img{
+    width: 64px;
+    height: 64px;
+}
+
+.avanti{
+    display: block;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    left: 95%;
+    top: 220px;
+    z-index: 10;
+    width: 64; 
+    height: 64;
+    border-radius: 50%;
+}
+
+.avanti img{
+    object-position: 3px 0;
+    object-fit: cover;
+}
+
+.dietro{
+    display: block;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    left: 0.5%;
+    top: 284px;
+    z-index: 10;
+    width: 64px; 
+    height: 64px;
+    border-radius: 50%;
+}
+
+.dietro img{
+    object-position: -67px 0;
+    object-fit: cover;
+}
+
+
+.headlines{
+    color: white;
+    padding: 5px;
+    font-size: 1.8em;
+    margin-left: 20px;
+}
+
+
+/* Dichiarazioni del popup e dei suoi contenuti*/
+.cover
+{
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+}
+
+.popup{
+    display: none;
+    position: fixed;
+    top: 5%;
+    left: 5%;
+    height: 90%;
+    width: 90%;
+    border: white 3px solid;
+    background-color: rgb(0, 168, 225);
+    color: white;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 10px;
+    z-index: 5;
+    overflow: hidden;
+}
+
+.popup h2{
+    text-align: center;
+}
+
+.popup a{
+    display: block;
+    position: absolute;
+    height: 35px;
+    width: 35px;
+    top: 15px;
+    right: 15px;
+    border-radius: 50%;
+    line-height: 35px;
+    border: solid 1px white;
+    text-decoration: none;
+    text-align: center;
+    font-size: 1.2em;
+    transition: 0.3s;
+    background-color: rgb(0, 168, 225);
+    color: white;
+}
+
+.popup a:hover{
+    background-color: white;
+    color: black;
+}
+
+.vetrina{
+    width: 45%;
+    height: 30%;
+    border: solid 1px white;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    border-radius: 10px;
+}
+
+.sinossi{
+    position: absolute;
+    width: 50%;
+    height: 45%;
+    overflow: hidden;
+    top: 10px;
+    left: 49%;
+    padding: 5px;
+
+}
+
+.trailer{
+    width: 50%;
+    height: 40%;
+    border: solid 1px white;
+    position: absolute;
+    left: 25%;
+    top: 49%;
+    padding: 0;
+}
+
+.trailer:hover{
+    cursor: pointer;
+}
+
+.lista_episodi{
+    display: none;
+    width: 100%;
+    height: 60%;
+    position: relative;
+    border: 1px solid white;
+    top: 40%;
+    padding: 0px;
+    list-style: none;
+    flex-wrap: wrap;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+
+.ep{
+    width: 100%;
+    border: 1px solid white;
+    border-right: none;
+    border-left: none;
+    height: 25%;
+    padding: 0px;
+    flex-wrap: wrap;
+    overflow: hidden;
+
+}
+
+.ep span{
+    width: 75%; 
+    margin: 0;
+    overflow: hidden;
+    padding: 0px;
+    display: flex;
+    top: -65%;
+    position: relative;
+    left: 22%;
+    padding-right: 10px;
+    z-index: 7;
+
+}
+
+.ep .copertina{
+    margin:0;
+    padding: 0;
+    width: 15%;
+    height: 80%;
+    display: flex;
+    top: 10%;
+    position: relative;
+    left: 10px;
+    border: 1px solid white;
+    min-width: 20%;
+    border-radius: 10px;
+    background-image: url(../images/logo-tipo.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 1px;
+}
+
+.ep .copertina img{ 
+    display: none;
+    object-fit: cover; 
+    width: 32px; 
+    height: 32px;   
+    left: 43%;
+    top: 30%;
+    position: relative;
+}
+
+.ep:hover img{
+    display: block;
+    object-position: -128px 0;
+}
+
+/* Dichiarazione dei film*/
+.films{
+    display: flex;
+    margin: 40px auto;
+    height: 280px;
+    padding: 10px;
+    z-index: 1;
+}
+
+.films li{
+    width: 20%;
+    border: 2px solid white;
+    margin: 10px;
+    list-style: none;
+    border-radius: 10px;
+    transition: 0.5s;
+    cursor:pointer;
+    position: relative;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.films li:hover{
+    width: 25%;
+    border: 2px solid gray;
+}
+
+span h3{
+    text-align: center;
+}
+
+.films li span{
+    position: absolute;
+    top: -210px;
+    left: 0;
+    height: 200px;
+    border: solid 1px white;
+    border-radius: 10px;
+    background-color: rgb(23, 103, 139);
+    color: white;
+    padding: 5px;
+    display: none;
+    overflow: auto;
+    overflow: hidden;
+}
+
+.films li:nth-child(1):hover span{
+    display: block; 
+}
+
+.films li:nth-child(2):hover span{
+    display: block;
+}
+
+.films li:nth-child(3):hover span{
+    display: block;
+}
+
+.films li:nth-child(4):hover span{
+    display: block;
+}
+
+.films li:nth-child(5):hover span{
+    display: block;
+}
+
+.films li:nth-child(1){
+    background-image: url(../images/theprestige.jpg);
+}
+
+.films li:nth-child(2){
+    background-image: url(../images/ouatih.jpg);
+}
+
+.films li:nth-child(3){
+    background-image: url(../images/HP.jpg);
+}
+
+.films li:nth-child(4){
+    background-image: url(../images/mos.jpg);
+}
+
+.films li:nth-child(5){
+    background-image: url(../images/sw-ro.png);
+}
+
+
+/* Dichiarazione delle serie*/
+.series{
+    display: flex;
+    margin: 40px auto;
+    height: 280px;
+    padding: 10px;
+}
+
+.series li{
+    width: 20%;
+    border: 2px solid white;
+    margin: 10px;
+    list-style: none;
+    position: relative;
+    border-radius: 10px;
+    transition: 0.5s;
+    cursor: pointer;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.series li span{
+    position: absolute;
+    top: -210px;
+    left: 0;
+    height: 200px;
+    border: solid 1px white;
+    border-radius: 10px;
+    background-color: rgb(23, 103, 139);
+    color: white;
+    padding: 5px;
+    display: none;
+    overflow: auto;
+    overflow: hidden;
+}
+
+.series li:nth-child(1):hover span{
+    display: block;
+}
+
+.series li:nth-child(2):hover span{
+    display: block;
+}
+
+.series li:nth-child(3):hover span{
+    display: block;
+}
+
+.series li:nth-child(4):hover span{
+    display: block;
+}
+
+.series li:nth-child(5):hover span{
+    display: block;
+}
+
+.series li:hover{
+    width: 25%;
+    border: 2px solid gray;
+}
+
+.series li:nth-child(1){
+    background-image: url(..//images/ted-lasso.jpeg);
+}
+
+.series li:nth-child(2){
+    background-image: url(../images/Breaking-Bad.jpg);
+}
+
+.series li:nth-child(3){
+    background-image: url(../images/bojack-horseman.jpg);
+}
+
+.series li:nth-child(4){
+    background-image: url(../images/suits.jpeg)
+}
+
+.series li:nth-child(5){
+    background-image: url(../images/the_crown.png)
+}
+
+
+
+/* Dichiarazioni dei documentari*/
+.docu{
+    display: flex;
+    margin: 40px auto;
+    height: 280px;
+    padding: 10px;
+}
+
+.docu li{
+    width: 20%;
+    border: 2px solid white;
+    margin: 10px;
+    list-style: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.5s;
+    position: relative;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.docu li span{
+    position: absolute;
+    top: -210px;
+    left: 0;
+    height: 200px;
+    border: solid 1px white;
+    border-radius: 10px;
+    background-color: rgb(23, 103, 139);
+    color: white;
+    padding: 5px;
+    display: none;
+    overflow: auto;
+    overflow: hidden;
+}
+
+.docu li:hover{
+    width: 25%;
+    border: 2px solid gray;
+}
+
+.docu li:nth-child(1):hover span{
+    display: block;
+}
+
+.docu li:nth-child(2):hover span{
+    display: block;
+}
+
+.docu li:nth-child(3):hover span{
+    display: block;
+}
+
+.docu li:nth-child(4):hover span{
+    display: block;
+}
+
+.docu li:nth-child(5):hover span{
+    display: block;
+}
+
+.docu li:nth-child(1){
+    background-image: url(../images/national_geo.jpg);
+}
+
+.docu li:nth-child(2){
+    background-image: url(../images/Bioethics.jpeg);
+}
+
+.docu li:nth-child(3){
+    background-image: url(../images/Buffa.jpg);
+    background-position: right center;
+}
+
+.docu li:nth-child(4){
+    background-image: url(../images/ufo.jpeg)
+}
+
+.docu li:nth-child(5){
+    background-image: url(../images/L-ultima-foresta.jpg)
+}
+
+
+
+
+/* Dichiarazioni del footer*/
+
+footer{
+    width: 100%;
+    height: 100px;
+    color: navy;
+    margin: 0 auto;
+    display: flex;
+    border: 1px solid white;
+    border-radius: 10px;
+    border-bottom-left-radius: none;
+    border-bottom-right-radius: none;
+    text-align: center;
+    z-index: 1;
+}
+
+footer li{
+    width: 25%;
+    height: 100%;
+    list-style: none;
+    z-index: 1;
+}
+
+footer li a{
+    text-decoration: none;
+    line-height: 99px;
+    font-size: 1.4em;
+    color: white;
+    position: relative;
+    display: inline-block;
+    z-index: 1;
+}
+
+footer li:nth-child(1) a:hover{
+    color: rgb(255, 0, 0);
+}
+
+footer li:nth-child(2) a:hover{
+    color:rgb(66, 103, 178)
+}
+
+footer li:nth-child(3) a:hover{
+    color: rgb(29, 161, 242);
+}
+
+footer li:nth-child(4) a:hover{
+    color:rgb(255, 48, 108);
+}
+
+footer li a img{
+    object-fit:cover;
+    width: 32px;
+    height: 32px;    
+    position: absolute;
+    top: 35px;
+    z-index: 1;
+}
+
+footer li:nth-child(1) a img{
+    object-position: 0 0;
+    left: 90px;
+}
+
+footer li:nth-child(2) a img{
+    object-position: -96px 0;
+    left: 110px;
+}
+
+footer li:nth-child(3) a img{
+    object-position: -128px 0;
+    left: 80px;
+}
+
+footer li:nth-child(4) a img{
+    object-position: -192px 0;
+    left: 110px;
+}
+
+
+
+/* Inizio della media query*/
+
+@media screen and (max-width: 992px){
+   
+    .menu{
+        margin-bottom: 35px;
+    }
+
+    .menu li a{
+        font-size: 0.8em;
+    }
+
+    .menu li a img{
+        display: none;
+    }
+
+    .menu li a:hover img{
+        background-color: white;
+    }
+
+    .news{
+        display: none;
+    }
+
+   
+
+    .films li:nth-child(1){
+        width: 100%;
+        background-position: center top;
+    }
+
+    .films li:nth-child(2){
+        display: none;
+    }
+
+    .films li:nth-child(3){
+        display: none;
+    }
+
+    .films li:nth-child(4){
+        display: none;
+    }
+
+    .films li:nth-child(5){
+        display: none;
+    }
+
+    footer li a img{
+        display: none;
+    }
+
+
+    .series li:nth-child(1){
+        width: 100%;
+        background-position: center center;
+    }
+
+    .series li:nth-child(2){
+        display: none;
+    }
+
+    .series li:nth-child(3){
+        display: none;
+    }
+
+    .series li:nth-child(4){
+        display: none;
+    }
+    
+    .series li:nth-child(5){
+        display: none;
+    }
+
+    .docu li:nth-child(1){
+        width: 100%;
+        background-position: center center;
+    }
+
+    .docu li:nth-child(2){
+        display: none;
+    }
+
+    .docu li:nth-child(3){
+        display: none;
+    }
+
+    .docu li:nth-child(4){
+        display: none;
+    }
+    
+    .docu li:nth-child(5){
+        display: none;
+    }
+
+
+    footer li a img{
+        display: none;
+    }
+
+    footer li a{
+        font-size: 0.9em;
+    }
+
+    .vetrina{
+        display: none;
+    }
+
+    .sinossi{
+        width: 100%;
+        left: 10px;
+        top: 10px;
+        height: 50%;
+        padding-right: 10px;
+    }
+
+    .trailer{
+        width: 100%;
+        height: 50%;
+        left: 0;
+        top: 50%;
+    }
+
+    @media screen and (max-width: 550px){
+    .ep span{
+        overflow: clip;
+        margin-left: 5px;
+    }
+
+
+    }
+}

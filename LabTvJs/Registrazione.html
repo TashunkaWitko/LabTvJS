@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stili/Registrazione.css">
+    <title>Registrazione</title>
+</head>
+<body>
+
+    <header><h1>Completa la registrazione</h1></header>
+    <div>
+        <form action="Login.html" method="post" id="formr">
+            <label for="email">Email</label><input type="text" id="email" name="email" required><br><br>
+            <label for="password">Password</label><input type="password" name="password" id="password" required><br><br>
+            <label for="ripeti">Ripeti Password</label><input type="password" name="ripeti" id="ripeti" required><br><br>
+            <input type="checkbox" required>Accetto i Termini e condizioni di utilizzo <br><br>
+            <button type="submit" id="submit">Registrati</button>           
+        </form>
+
+    </div>
+    
+
+    <div id="risultato" class="prevent">
+        Hai effettuto la registrazione correttamente! <br>
+        Attendi un istante per essere reindirizzato alla pagina di login. Altrimenti clicca il link sottostante<br>
+        <a href="Login.html">Clicca qui</a>
+    </div>
+
+
+    
+    
+</body>
+<script src="script/Registrazione.js"></script>
+</html>
